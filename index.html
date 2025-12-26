@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>Anseong Odor Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="wrap">
+
+    <!-- LEFT -->
+    <div id="left">
+      <h3>기간 선택</h3>
+
+      <div class="cal-head">
+        <div class="cal-title">2025년 10월</div>
+      </div>
+
+      <div id="range-label" class="hint"></div>
+
+      <div class="cal-wrap">
+        <div class="week-col">
+          <div class="week-btn" id="wk1"></div>
+          <div class="week-btn" id="wk2">2주</div>
+          <div class="week-btn" id="wk3">3주</div>
+          <div class="week-btn" id="wk4">4주</div>
+          <div class="week-btn" id="wk5"></div>
+        </div>
+
+        <div id="calendar" class="calendar"></div>
+      </div>
+
+      <hr class="sep">
+
+      <button id="btn-all">10월 누적 냄새지수</button>
+
+      <p class="hint">
+        • 날짜 : 해당 일의 누적 냄새지수<br>
+        • 주 : 해당 주의 누적 냄새지수<br>
+        • 우측 빨간점 : 시간별 누적 냄새지수<br>
+        • 회색 = 데이터 없음<br>
+      </p>
+
+      <div id="legend"></div>
+
+      <hr class="sep">
+
+    <h3>풍향</h3>
+    <div id="wind-ui">
+      <svg id="wind-dir" width="80" height="80"></svg>
+      <div id="wind-speed" class="hint"></div>
+    </div>
+
+    </div>
+
+    <!-- CENTER -->
+    <div id="center">
+      <div id="map-controls">
+        <button id="toggle-barns">축사 보기</button>
+      </div>
+      <svg id="map" width="900" height="900"></svg>
+      <div id="center-title">DongNeDungNe</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div id="right">
+      <div class="profile-header">
+        <h3>시간 프로파일</h3>
+        <h3>누적지도-></h3>
+        <button id="toggle-map-view" class="ghost">누적 지도</button>
+      </div>
+
+      <svg id="profile" width="220" height="700"></svg>
+    </div>
+
+
+  </div>
+
+  <div id="tip"></div>
+  <script src="main.js"></script>
+</body>
+</html>
